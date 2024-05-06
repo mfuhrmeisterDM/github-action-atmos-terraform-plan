@@ -175,7 +175,7 @@ runs:
         role-to-assume: ${{ steps.config.outputs.terraform-plan-role }}
         role-session-name: "atmos-terraform-plan-gitops"
         mask-aws-account-id: "no"
-        role-chaning: ${{ steps.config.outputs.aws-role-chain }}
+        role-chaining: ${{ steps.config.outputs.aws-role-chain }}
 
     - name: Atmos Terraform Plan
       if: ${{ steps.atmos-github-actions-enabled.outputs.value == 'true' }}
