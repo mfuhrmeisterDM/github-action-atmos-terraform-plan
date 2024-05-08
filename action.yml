@@ -261,7 +261,7 @@ runs:
         role-session-name: "atmos-terraform-state-gitops"
         mask-aws-account-id: "no"
         role-chaining: ${{ steps.config.outputs.aws-role-chaining }}
-        unset-current-credentials: ${{ steps.config.outputs.aws-role-chaining == 'false' }}
+        unset-current-credentials: ${{ steps.config.outputs.aws-role-chaining }}
 
     - name: Store New Plan
       if: ${{ steps.atmos-plan.outputs.error == 'false' }}
